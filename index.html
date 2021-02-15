@@ -1,59 +1,99 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <br><br>
         <title>Megan Costello</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="Megan Costello's Personal Website">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Megan Costello">
     </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a> </li>
-            <li><a href="#news">News</a> </li>
-            <li><a href="#projects">Project</a> </li>
-        </ul>
-    </nav>
+<div class = "container">
+    <body>
+        <nav>
+            <ul class="flex-container">
+                <li class = "flex-item"><a href="#about">About</a> </li>
+                <li class = "flex-item"><a href="#news">News</a> </li>
+                <li class = "flex-item"><a href="#projects">Projects</a> </li>
+            </ul>
+        </nav>
 
-    <section id="about">
-        <b><h1>Megan Costello</h1></b>
-        <img src="images/headshot.jpg" alt="profile picture" height="250">
-        <p><b>Computer Science & Economics Student @ BC</b>
-        <br>Morrissey College of Arts & Sciences 2022
-        <br> costelmx@bc.edu
-        <br> <a href="https://github.com/megancostello" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/megankcostello" target="_blank">LinkedIn</a></p>
-        <p>I am a junior at Boston College, double majoring in Computer Science and Economics. 
-            I'm particularly interested in topics such as data analysis and investment strategies. My
-            hobbies include creating art, reading novels, watching good movies, and crafting.</p>
-    </section>
+        <div class = "row">
+            <div class = "col-6">
+                <section id="about" >
+                    <b><h1 class = "title">Megan Costello</h1></b>
+                    <img class = "image" src="images/headshot.jpg" alt="profile picture" height="250">
+                    <p><b>Computer Science & Economics Student @ Boston College</b>
+                    <br>Morrissey College of Arts & Sciences
+                    <br>Class of 2022
+                    <br> <i class="fas fa-envelope-square"></i> costelmx@bc.edu
+                    <br> <a href="https://github.com/megancostello" target="_blank"><i class="fab fa-github"></i> GitHub</a> | <a href="https://www.linkedin.com/in/megankcostello" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+            </div>
+            <div class = "col-6">
+                <br>
+                <p>I am a junior at Boston College, double majoring in Computer Science and Economics. 
+                    I'm particularly interested in topics such as data analysis and investment strategies. My
+                    hobbies include creating art, reading novels, watching good movies, and crafting.</p>
+            </section>
+            </div>
+        </div>
 
-    <section id="news">
-        <b><h1>News</h1></b>
-        <p>
-            Ecommerce Intern at Outward Hound (Remote)
-            <br>July 2020 - present
-            <br>Enterprise Mobility Engineer Intern at Petco (Rancho Bernardo, CA)
-            <br>June 2019 - August 2019
-            <br>Enrolled at Boston College (Chestnut Hill, MA)
-            <br>August 2018
-            <br>Graduated from Canyon Crest Academy (San Diego, CA)
-            <br>June 2018
-        </p>
-    </section>
+        <section id="news" >
+            <b><h1 class = "title">News</h1></b>
+            <div class = "row">
+                <div class = "col-8">
+                    <p>
+                        Ecommerce Intern at Outward Hound (Remote)
+                        <br>Enterprise Mobility Engineer Intern at Petco (Rancho Bernardo, CA)
+                        <br>Enrolled at Boston College (Chestnut Hill, MA)
+                        <br>Graduated from Canyon Crest Academy (San Diego, CA)
+                    </p>
+                </div>
+                <div class = "col-4">
+                    <p>
+                        July 2020 - present
+                        <br>June 2019 - August 2019
+                        <br>August 2018
+                        <br>June 2018
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <section id="projects">
-        <b><h1>Projects</h1></b>
-        <p>
-            <a href="quantconnect-project.html"><b>Coding Investment Strategies based on Sentiment with QuantConnect</b></a>
-            <br>A group project for my Computational Investing class during Fall 2020.
-            <br><br>
-            <img src="images/2020simulation-quantconnect.png" width="300">
+        <section id="projects" >
+            <b><h1 class = "title">Projects</h1></b>
+            <p>
+                <a href="quantconnect-project.html"><b>Coding Investment Strategies based on Sentiment with QuantConnect</b></a>
+                <div class = "tag-flex-container">
+                    <div class = "tags python-tag"> Python </div>
+                    <div class = "tags econ-tag"> Econ </div>
+                    <div class = "tags cs-tag"> CS </div>
+                </div>
+                <br>A group project for my Computational Investing class during Fall 2020.
+                <br><br>
+                <img src="images/2020simulation-quantconnect.png" width="300">
 
-            <br><br>
-            <a href="databases-project.html"><b>Event Registration APEX App using Oracle SQL</b></a>
-            <br>A group project for my Database Systems and Applications class during Fall 2020.
-            <br><br>
-            <img src="images/registration-apex-oracle.png" width="300">
-        </p>
-    </section>
+                <br><br>
+                <a href="databases-project.html"><b>Event Registration APEX App using Oracle SQL</b></a>
+                <br><br>
+                <div class = "tag-flex-container">
+                    <div class = "tags sql-tag"> SQL </div>
+                    <div class = "tags cs-tag"> CS </div>
+                </div>
+                <br>A group project for my Database Systems and Applications class during Fall 2020.
+                <br><br>
+                <img src="images/registration-apex-oracle.png" width="300">
+            </p>
+        </section>
 
-</body>
+    </body>
+</div>
 </html>

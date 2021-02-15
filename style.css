@@ -1,0 +1,104 @@
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav ul{
+    list-style-type:none;
+    
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+section .title{
+    font-family: 'Newsreader', serif;
+    font-size: 2rem;
+}
+
+section .title:hover{
+    -webkit-animation: bounce 1s;
+    animation: bounce 1s;
+}
+
+.flex-item{
+    background-color: white;
+    font-size: 25px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.row{
+	display: flex;	
+    flex-wrap:wrap;
+}
+
+[class*=col-] {
+    flex-basis: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+    .col-1 {flex-basis: 8.33%;} /* width works too */
+    .col-2 {flex-basis: 16.66%;}
+    .col-3 {flex-basis: 25%;}
+    .col-4 {flex-basis: 33.33%;}
+    .col-5 {flex-basis: 41.66%;}
+    .col-6 {flex-basis: 50%;}
+    .col-7 {flex-basis: 58.33%;}
+    .col-8 {flex-basis: 66.66%;}
+    .col-9 {flex-basis: 75%;}
+    .col-10 {flex-basis: 83.33%;}
+    .col-11 {flex-basis: 91.66%;}
+    .col-12 {flex-basis: 100%;}
+    
+}
+
+.image{
+    border-radius: 25px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.tag-flex-container{
+    display:flex;
+    gap: 2.5%;
+}
+.tags{
+    font-size: px;
+}
+.python-tag{
+    background-color: #6ab89e;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.cs-tag{
+    background-color:#758fc7;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.sql-tag{
+    background-color:#75b8c7;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.econ-tag{
+    background-color: #c7a275;
+    border-radius: 25px;
+    padding: 5px;
+}
