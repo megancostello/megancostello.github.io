@@ -1,0 +1,63 @@
+{
+	"about":{
+		"name":"Megan Costello",
+        "title":"Computer Science & Economics Student @ Boston College",
+        "college":"Morrissey College of Arts & Sciences",
+        "classyear":"Class of 2022",
+        "email":"costelmx@bc.edu",
+        "photo":"images/headshot.jpg",
+        "summary": "I am a junior at Boston College, double majoring in Computer Science and Economics. I'm particularly interested in topics such as data analysis and investment strategies. My hobbies include creating art, reading novels, watching good movies, and crafting.",
+        "githublink": "https://github.com/megancostello",
+        "linkedinlink": "https://www.linkedin.com/in/megankcostello"
+	},
+	"news":[
+		{
+			"title": "Ecommerce Intern at Outward Hound (Remote)",
+			"date": "July 2020 - present"
+		},
+
+        {
+			"title": "Enterprise Mobility Engineer Intern at Petco (Rancho Bernardo, CA)",
+			"date": "June 2019 - August 2019"
+		},
+
+        {
+			"title": "Enrolled at Boston College (Chestnut Hill, MA)",
+			"date": "August 2018"
+		},
+
+        {
+			"title": "Graduated from Canyon Crest Academy (San Diego, CA)",
+			"date": "June 2018"
+		}		
+	],
+
+    "projects":[
+		{
+            "id": "qc-proj",
+			"title": "Coding Investment Strategies based on Sentiment with QuantConnect",
+            "tags1":[["Python","python-tag"],["Econ","econ-tag"],["CS","cs-tag"]],
+            "tags":["Python","Econ","CS"],
+            "tagclasses":["python-tag","econ-tag","cs-tag"],
+            "frontimage":"images/2020simulation-quantconnect.png",
+            "images":["images/2020simulation-quantconnect.png", "images/stockbreakdown.png", "images/iscurve.png", "images/regression-data.png"],
+            "shortdescription": "A group project for my Computational Investing class during Fall 2020.",
+            "description": "I created this project with a group of classmates as a final project in Introduction to Computational Investing (ECON3382). We programmed our project to simulate investing based on positive and negative sentiment in news articles published the day before trading. We traded the top ten most traded stocks by dollar volume and decided to buy/sell based on the sentiment of words in news articles using the TiingoNews API in QuantConnect. We also implemented stemming to be able to cover more variations of a type of word,to increase our calculated sentiment scores. This project used Python and was created within the QuantConnect project environment to simulate trading over 2020."
+		},
+        {
+            "id": "sql-proj",
+			"title": "Event Registration APEX App using Oracle SQL",
+            "tags1":[["SQL","sql-tag"],["CS","cs-tag"]],
+            "tags":["SQL","CS"],
+            "tagclasses":["sql-tag","cs-tag"],
+            "frontimage":"images/registration-apex-oracle.png",
+            "images":["images/registration-apex-oracle.png", "images/registrationentry-apex-oracle.png", "images/student-apex-oracle.png", "images/event-apex-oracle.png"],
+            "shortdescription":"A group project for my Database Systems and Applications class during Fall 2020.",
+            "description":"I created this web application with a group as my final project in Database Systems and Applications (CSCI2257/ISYS2257). We created an APEX application using Oracle SQL to create an application that would register students for different kinds of campus events. The database allowed users to register new students, events, and enroll/cancel registrations. To create this project, I learned about ER diagrams, stored procedures, and updating/inserting records."
+        }
+    ]
+
+
+}
+
+ 

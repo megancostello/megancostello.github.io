@@ -9,6 +9,7 @@ nav ul{
     
 }
 
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -24,8 +25,10 @@ section .title:hover{
 }
 
 .flex-item{
-    background-color: white;
+    background-color:rgb(173, 215, 250);
     font-size: 25px;
+    padding: 5px;
+    font-family: 'Newsreader', serif;
 }
 
 .flex-container {
@@ -78,6 +81,7 @@ section .title:hover{
 }
 .tags{
     font-size: px;
+    font-weight: 200;
 }
 .python-tag{
     background-color: #6ab89e;
