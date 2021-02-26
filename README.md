@@ -1,2 +1,4 @@
 # Portfolio Website
-portfolio website - HTML Lab in CSCI2254
+Portfolio Website for CSCI2254 Web Application Development @ BC
+
+https://megancostello.github.io/
