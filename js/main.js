@@ -18,6 +18,7 @@ fetch('data.json')
     }
     else {
         renderMainPage(data);
+        addInteractions(data);
     }
     
 
@@ -50,9 +51,7 @@ function renderNavbar(page){
         </nav>
         `; 
     }
-    else{
-
-    }
+ 
         
 };
 
@@ -79,20 +78,28 @@ function renderAbout(about){
 };
 
 function renderNews(news){
+    console.log('news is ', news);
     return `
     <section id="news" >
         <b><h1 class = "title">News</h1></b>
+        <div class="search">
+            <input type="search" name='news' placeholder="Search News...">
+        </div>
         <div class = "row">
-            <div class = "col-8">
-                <p>
-                    ${renderNewsTitles(news)}
-                </p>
-            </div>
-            <div class = "col-4">
-                <p>
-                    ${renderNewsDates(news)}
-                </p>
-            </div>
+                <div class = "col-8">
+                    <p>
+                        <div class = "news-titles">
+                            ${renderNewsTitles(news.slice(0,5))}
+                        </div>
+                    </p>
+                </div>
+                <div class = "col-4">
+                    <p>
+                        <div class = "news-dates">
+                            ${renderNewsDates(news.slice(0,5))}
+                        </div>
+                    </p>
+                </div>
         </div>
     </section>
     `;
@@ -116,8 +123,27 @@ function renderProjects(projects){
     return `
     <section id="projects" >
         <b><h1 class = "title">Projects</h1></b>
+        <div class="filter">
+            <label>
+                <input type="radio" name="filter" value="All" checked> All
+            </label>
+            <label>
+                <input type="radio" name="filter" value="CS"> CS
+            </label>
+            <label>
+                <input type="radio" name="filter" value="Python"> Python
+            </label>
+            <label>
+                <input type="radio" name="filter" value="SQL"> SQL
+            </label>
+            <label>
+                <input type="radio" name="filter" value="Econ"> Econ
+            </label>
+        </div>
         <p>
-            ${renderProjectItems(projects)}
+            <div class = "project-list">
+                ${renderProjectItems(projects)}
+            </div>
         </p>
     </section>`;
 };
@@ -173,6 +199,29 @@ function renderProjectDetails(p){
     </body>`;
 };
 
+function addInteractions(data){
+    document.querySelector('.search input[name="news"]').addEventListener('input', (event)=>{
+        const search = document.querySelector('.search input[name="news"]').value;
+        console.log('search is ',search);
+        const result = data.news.filter(n => n.title.toLowerCase().includes(String(search).toLowerCase()));
+        console.log('result is ', result);
+        document.querySelector('.news-titles').innerHTML = renderNewsTitles(result);
+        document.querySelector('.news-dates').innerHTML  = renderNewsDates(result);
+    });
 
+    let buttons = document.querySelectorAll('.filter input[name="filter"]');
+
+    buttons.forEach(cond=>cond.addEventListener('change', function(event){
+        let projs = null;
+        if (cond.value == 'All') {
+            projs = data.projects
+        }
+        else {
+            projs = data.projects.filter(p => p.tags.includes(cond.value));
+        }
+        console.log('projs are ', projs);
+        document.querySelector('.project-list').innerHTML = renderProjectItems(projs);
+    }));
+};
 
 
